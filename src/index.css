@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Barrio|Economica');
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 50px 'Barrio',  sans-serif;
+}
+
+nav {
+  background-color: #b8defa;
+  width: 90%;
+  padding: 0.6vh 0 0.6vh 1vw;
+  font-size: 1.7vw;
+  letter-spacing: 1.5px;
+  border-bottom-right-radius: 0.5vw; 
+  border-top-right-radius: 0.5vw; 
+}
+
+.link {
+  text-decoration: none;
+  font-size: 3.5vw;
+  padding: 2vw;
+  color: white;
+}
+
+.link:hover .link:active {
+  color: gray;
+}
+
+table, p {
+  margin: 10% 10%;
+  color: gray;
+  text-align: center;
+}
+
+td {
+  padding: 0.8vw;
+}
