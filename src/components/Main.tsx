@@ -26,7 +26,7 @@ export default class Main extends React.Component<{}, State>  {
     .catch(err => console.log(err.message));
   }
 
-  render() {
+  public render() {
     return (
       this.state.loading
       ? <p> Loading... </p>
