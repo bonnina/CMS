@@ -17,12 +17,13 @@ export default class Main extends React.Component<{}, State>  {
 
   componentWillMount() {
     api()
-    .then(result => {
+    .then(result => result.sort((a: any, b: any) => a.order - b.order))
+    .then(sorted => 
       this.setState({
-        data: result,
+        data: sorted,
         loading: false
       })
-    })
+    )
     .catch(err => console.log(err.message));
   }
 
@@ -34,7 +35,7 @@ export default class Main extends React.Component<{}, State>  {
         <div>
           <Header data={this.state.data}/>
           <Switch>
-            {this.state.data.map(el => (
+            {this.state.data.map((el: any) => (
               <Route
                 key={el.order}
                 path={`/${el.id}`}
