@@ -4,13 +4,18 @@ import Wrapper from './Wrapper';
 import Header from './Header';
 import api from '../api';
 
-interface State {
-  data: Array<{id: string, title: string, order: number, path: string}>,
+interface IState {
+  data: Array<{
+    id: string, 
+    title: string, 
+    order: number, 
+    path: string
+  }>,
   loading: boolean
 }
 
-export default class Main extends React.Component<{}, State>  {
-  public state: State = {
+export default class Main extends React.Component<{}, IState>  {
+  public state: IState = {
     data: [],
     loading: true
   };

@@ -1,15 +1,15 @@
 import * as React from 'react';
 
-interface Props {
+interface IProps {
   imp?: string;
 }
 
-interface State {
+interface IState {
   Module: Function | null;  
 }
 
-export default class Wrapper extends React.Component<Props, State> {
-  public state: State = {
+export default class Wrapper extends React.Component<IProps, IState> {
+  public state: IState = {
     Module: null
   };
 
