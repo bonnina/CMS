@@ -22,6 +22,7 @@ export default class Wrapper extends React.Component<IProps, IState> {
 
   public render() {
     const { Module } = this.state;
+    
     return Module && <Module />
   }
 }

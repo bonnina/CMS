@@ -6,10 +6,10 @@ import api from '../api';
 
 interface IState {
   data: Array<{
-    id: string, 
+    id   : string,
+    path : string,
     title: string, 
-    order: number, 
-    path: string
+    order: number,
   }>,
   loading: boolean
 }
@@ -25,7 +25,7 @@ export default class Main extends React.Component<{}, IState>  {
     .then(result => result.sort((a: any, b: any) => a.order - b.order))
     .then(sorted => 
       this.setState({
-        data: sorted,
+        data   : sorted,
         loading: false
       })
     )
